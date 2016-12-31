@@ -3,16 +3,9 @@
   
     
     <entry>
-      <title><![CDATA[夏明]]></title>
-      <url>%2F2016%2F12%2F31%2F%E5%A4%8F%E6%98%8E%2F</url>
-      <content type="text"><![CDATA[中还好]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[好的]]></title>
-      <url>%2F2016%2F12%2F30%2F%E5%A5%BD%E7%9A%84%2F</url>
-      <content type="text"><![CDATA[gggfsd##fdkdfvha哈]]></content>
+      <title><![CDATA[WampServer环境搭建]]></title>
+      <url>%2F2016%2F12%2F31%2FWampServer%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%2F</url>
+      <content type="text"><![CDATA[Wamp Windows + Apache + Mysql + PHP，首字母组合。 安装WampServer安装wampserver，和普通软件安装无差别，除指定安装路径外，其它默认安装。 管理HTTP服务1.任务图标绿色为正常启动状态 2.通过图形控制台可以启动、重启、停止所有服务 或者单独启动、重启、停止特定服务 注意事项： 1、检查网络是不是通的 ping 对方IP 2、检查防火墙是否开启，如果开启将不能正常被访问 3、检查访问权限 Allow from all 4、理解默认索引 5、确保端口没有被其它程序占用 6、“#”表示注释 7、修改配置要格外小心，禁止无意修改其它内容 配置根目录网站根目录是Web服务器上存放网站程序的空间，可通过修改配置文件自定义，如E:/www 具体步骤如下 1、打开配置文件，控制台选择 或者 wampserver安装目录下&emsp;&emsp;bin\apache\Apache2.2.21\conf\httpd.conf 2、设定根目录，查找并修改 例如: 这样就指定了 “E:/www/“为存放网站的根目录。 3、配置根目录，查找 修改成 4、修改完后，并不能立即生效，需要重启Apache 注：可以指定任意目录为根目录 网站部署将我们制作好的网页拷贝到配置好的根目录下，浏览器访问127.0.0.1即可。 配置虚拟主机在一台Web服务器上，我们可以通过配置虚拟主机，然后分别设定根目录，实现对多个网站的管理。 具体步骤如下： 1、开启虚拟主机辅配置，在httpd.conf 中找到 去掉前面的#号注释，开启虚拟主机配置2、配置虚拟主机，打开 &emsp;&emsp;conf/extra/httpd-vhosts.conf 复制一份上图的代码，&emsp;&emsp;分别修改以下三项DocumentRoot “E:/www/example”ServerName “example.com “ServerAlias “www.example.com”其它项无需指定。 3、修改DNS（hosts）文件打开C:\Windows\System32\drivers\etc\hosts目录是固定的 注：修改hosts文件权限 4、重启Apache 5、浏览器访问www.example.com 如果想再配置个的话，就重复最后两个步骤即可。（配置虚拟主机2、3、)]]></content>
     </entry>
 
     
