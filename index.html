@@ -414,36 +414,17 @@
 
       
         
-          
-            <h3 id="下载及安装"><a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h3><blockquote>
+          <h3 id="下载及安装"><a href="#下载及安装" class="headerlink" title="下载及安装"></a>下载及安装</h3><blockquote>
 <p>搜索下载Fiddler,安装在任意自己习惯的盘符即可</p>
 </blockquote>
-<h3 id="一些简单的配置"><a href="#一些简单的配置" class="headerlink" title="一些简单的配置"></a>一些简单的配置</h3><p><strong>注意</strong>：配置时需要pc和手机在同一局域网下！！！！！！</p>
-<blockquote>
-<p>1.启动Fiddler，打开菜单栏中的 Tools &gt; Fiddler Options，打开“Fiddler Options”对话框</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/Fiddler01.png" alt="image"></p>
-<blockquote>
-<p>2.在Fiddler Options”对话框切换到“Connections”选项卡，然后勾选“Allow romote computers to connect”后面的复选框，然后点击“OK”按钮。(此处的8888也可以修改，不修改即可)</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/Fiddler02.png" alt="image"></p>
-<blockquote>
-<p>3.在Fiddler Options”对话框切换到“HTTPS”选项卡，然后勾选“Decypt HTTPS traffic”后面的复选框，需要安装证书，直接点确定即可，然后点击“OK”按钮。（此操作是为了解决有些网站加密协议拿不到数据的情况）</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/Fiddler03.png" alt="image"></p>
-<blockquote>
-<p>4.在本机命令行输入：ipconfig，找到本机的ip地址。</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/Fiddler05.png" alt="image"></p>
-<blockquote>
-<p>5.打开手机wifi设置,找到你连接的网络，修改网络，把代理设置成手动，服务器填上面获取到的ip,端口为8888,（如果你自己修改了，就填写你修改的值），然后保存即可。</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/Fidller04.jpg" alt="image"></p>
-<blockquote>
-<p>6.重启Fiddler，在手机端方位数据，pc端即可拿到请求和响应的数据。</p>
-</blockquote>
-
-          
+<h3 id="一些简单的配置"><a href="#一些简单的配置" class="headerlink" title="一些简单的配置"></a>一些简单的配置</h3><p><strong>注意</strong>：配置时需要pc和手机在同一局域网下！！！！！！<br>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/01/01/Fiddler抓包工具的使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -591,75 +572,18 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p><strong>Wamp</strong> Windows + Apache + Mysql + PHP，首字母组合。</p>
 </blockquote>
 <h2 id="安装WampServer"><a href="#安装WampServer" class="headerlink" title="安装WampServer"></a>安装WampServer</h2><pre><code>安装wampserver，和普通软件安装无差别，除指定安装路径外，其它默认安装。
-</code></pre><h2 id="管理HTTP服务"><a href="#管理HTTP服务" class="headerlink" title="管理HTTP服务"></a>管理HTTP服务</h2><pre><code>1.任务图标绿色为正常启动状态
-2.通过图形控制台可以启动、重启、停止所有服务
-</code></pre><p><img src="http://oj1n50gg0.bkt.clouddn.com/wampstart.png" alt="image"></p>
-<pre><code>或者单独启动、重启、停止特定服务
-</code></pre><p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp02.png" alt="image"></p>
-<p><strong>注意事项</strong>：</p>
-<pre><code>1、检查网络是不是通的 ping 对方IP
-2、检查防火墙是否开启，如果开启将不能正常被访问
-3、检查访问权限 Allow from all
-4、理解默认索引
-5、确保端口没有被其它程序占用
-6、“#”表示注释
-7、修改配置要格外小心，禁止无意修改其它内容
-</code></pre><h2 id="配置根目录"><a href="#配置根目录" class="headerlink" title="配置根目录"></a>配置根目录</h2><pre><code>网站根目录是Web服务器上存放网站程序的空间，可通过修改配置文件自定义，如E:/www
-</code></pre><p><strong>具体步骤如下</strong></p>
-<blockquote>
-<p>1、打开配置文件，控制台选择</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp03.png" alt="image"></p>
-<blockquote>
-<p>或者 wampserver安装目录下&emsp;&emsp;bin\apache\Apache2.2.21\conf\httpd.conf</p>
-<p>2、设定根目录，查找并修改</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp04.png" alt="image"></p>
-<blockquote>
-<p>例如:</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp05.png" alt="image"></p>
-<blockquote>
-<p>这样就指定了 “E:/www/“为存放网站的根目录。</p>
-<p>3、配置根目录，查找</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp06.png" alt="image"></p>
-<blockquote>
-<p>修改成</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp07.png" alt="image"></p>
-<blockquote>
-<p>4、修改完后，并不能立即生效，需要<code>重启Apache</code></p>
-</blockquote>
-<p><strong>注</strong>：可以指定任意目录为根目录</p>
-<h2 id="网站部署"><a href="#网站部署" class="headerlink" title="网站部署"></a>网站部署</h2><pre><code>将我们制作好的网页拷贝到配置好的根目录下，浏览器访问127.0.0.1即可。
-</code></pre><h2 id="配置虚拟主机"><a href="#配置虚拟主机" class="headerlink" title="配置虚拟主机"></a>配置虚拟主机</h2><pre><code>在一台Web服务器上，我们可以通过配置虚拟主机，然后分别设定根目录，实现对多个网站的管理。
-</code></pre><p><strong>具体步骤如下：</strong></p>
-<blockquote>
-<p>1、开启虚拟主机辅配置，在httpd.conf 中找到</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp08.png" alt="image"></p>
-<blockquote>
-<p>去掉前面的#号注释，开启虚拟主机配置<br>2、配置虚拟主机，打开 &emsp;&emsp;conf/extra/httpd-vhosts.conf</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp09.png" alt="image"></p>
-<blockquote>
-<p>复制一份上图的代码，&emsp;&emsp;分别修改以下三项<br>DocumentRoot “E:/www/example”<br>ServerName “example.com “<br>ServerAlias “www.example.com”<br>其它项无需指定。</p>
-<p>3、修改DNS（hosts）文件<br>打开C:\Windows\System32\drivers\etc\hosts<br>目录是固定的</p>
-</blockquote>
-<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp010.png" alt="image"><br><strong>注</strong>：修改hosts文件权限</p>
-<blockquote>
-<p>4、重启Apache</p>
-<p>5、浏览器访问www.example.com</p>
-</blockquote>
-<p><strong>如果想再配置个的话，就重复最后两个步骤即可。（配置虚拟主机2、3、)</strong></p>
-
-          
+</code></pre>
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/12/31/WampServer环境搭建/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
