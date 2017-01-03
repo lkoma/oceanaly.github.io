@@ -90,10 +90,14 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/03/WampServer环境搭建-补充/index.html">
 <meta property="og:site_name" content="Oceanaly">
 <meta property="og:description" content="服务器配置文档">
-<meta property="og:updated_time" content="2017-01-03T16:23:40.238Z">
+<meta property="og:image" content="http://oj1n50gg0.bkt.clouddn.com/wamp12.jpg">
+<meta property="og:image" content="http://oj1n50gg0.bkt.clouddn.com/wamp11.jpg">
+<meta property="og:image" content="http://oj1n50gg0.bkt.clouddn.com/wamp13.jpg">
+<meta property="og:updated_time" content="2017-01-03T16:33:49.840Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WampServer环境搭建--补充">
 <meta name="twitter:description" content="服务器配置文档">
+<meta name="twitter:image" content="http://oj1n50gg0.bkt.clouddn.com/wamp12.jpg">
 
 
 
@@ -428,6 +432,7 @@
 <li>2.开启 proxy_http_module 和 proxy_module 模块，将#号删除</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#LoadModule proxy_module modules/mod_proxy.so</div><div class="line">#LoadModule proxy_http_module modules/mod_proxy_http.so</div></pre></td></tr></table></figure>
+<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp12.jpg" alt="image"></p>
 <ul>
 <li>3.代理详细配置</li>
 </ul>
@@ -438,10 +443,12 @@
 <li>4.开启辅配置，将#号删除</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#Include conf/extra/httpd-vhosts.conf</div></pre></td></tr></table></figure>
+<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp11.jpg" alt="image"></p>
 <ul>
 <li>5.配置虚拟主机</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;VirtualHost *:80&gt;</div><div class="line">    ServerAdmin webmaster@dummy-host.studyit.com</div><div class="line">    DocumentRoot &quot;E:/www/studyit&quot;</div><div class="line">    ServerName studyit.com</div><div class="line">    ServerAlias www.studyit.com</div><div class="line">    ErrorLog &quot;logs/dummy-host.studyit.com-error.log&quot;</div><div class="line">    CustomLog &quot;logs/dummy-host.studyit.com-access.log&quot; common</div><div class="line"></div><div class="line">    # 将两行代码粘贴过来</div><div class="line">    ProxyRequests Off</div><div class="line">    # 访问/api 相当于访问 http://api.botue.com</div><div class="line">    # 这样所有的请求就经过 /api 被代理到 http://api.botue.com了</div><div class="line">    ProxyPass /api http://api.botue.com</div><div class="line">    #这里http://api.botue.com是我的服务器，在公司中要以实际为准</div><div class="line">    # /api 也不是固定的，可以自行调整</div><div class="line">&lt;/VirtualHost&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://oj1n50gg0.bkt.clouddn.com/wamp13.jpg" alt="image"></p>
 <h2 id="PHP中不现实notice提示的操作"><a href="#PHP中不现实notice提示的操作" class="headerlink" title="PHP中不现实notice提示的操作"></a>PHP中不现实notice提示的操作</h2><ul>
 <li>1.从服务器打开任意php文件，php文件代码如下</li>
 </ul>
