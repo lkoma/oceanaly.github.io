@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[问题汇总及一些小技巧]]></title>
+      <url>%2F2017%2F01%2F12%2F%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB%E5%8F%8A%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
+      <content type="text"><![CDATA[行内元素有哪些?块级元素有哪些? 行内元素：span、img、a、i、em、img、b、input、s、br…块元素：div、h1~h6、p、ul、li、ol、dl、table… javascript的type返回那些数据类型？ number、string、undefined、boolear、object、function split( )和join的区别？ split( )是将字符串（根据某个分隔符）分割成若干个元素放入数组中;join( )是将数组拼接成字符串; 数组方法pop( ),push( ),unshif(t),shift( )的用法？ pop( )是在弹出数组末尾元素，返回被弹出的元素值，如果是空数组则返回undefined;push( )是在数组末尾添加元素，也可以是多个元素，返回添加元素以后的数组长度;unshift( )是在数组的第一个元素前插入元素，也可以一次插入多个元素（顺序一次从左边排起）;shift( )是弹出数组的第一个元素,返回被弹出的元素值;注意：这四种都是在数组本身上进行修改。 ajax请求时，get和post方式的区别？ 1.get请求时，参数在URL中显示，post请求则不会显示2.get请求发送数据量小，post发送数据量大3.get请求要注意 缓存问题，post则不需要考虑这个问题4.post请求必须设置请求头，get则不需要设置5.发送请求时，因为get请求的参数都在url里，所以send( )函数发送的参数为null，而post请求在使用send( )方法时，却需赋予其参数。 call和apply的区别？ a.call(b,arg1,arg2…)和a.apply(b,[arg1,arg2…])是将a的this指向b.而call后面的参数为一个或多个，apply的参数为一个数组或伪数组.应用场景：call适合知道参数数量且参数不多的情况下，apply则适合不知道参数数量或者参数比较多，参数为数组，伪数组的时候apply()还可以实现伪数组转为数组 ajax请求时，是如何解析json数据的？ JSON.parse()方法可以将json数据解析为对象 document.ready事件和document.onload事件的区别 document.ready事件,表示文档结构已经加载完成（不包含图片等非文字媒体文件）document.onload事件，表示文档结构以及图片等文件的所有元素都加载完成 排序算法 冒泡排序123456789101112131415161718192021var arr = [5,9,3,5,6,7,1,10,12,13];function sort(arr)&#123; var count = 0; for(var i = 0, len = arr.length; i&lt;len; i++)&#123; var flag = true; for(var j = 0,len = arr.length; j&lt;len-i; j++)&#123; if(arr[j]&gt;arr[j+1])&#123; count++; var temp = arr[j+1]; arr[j+1] = arr[j]; arr[j] = temp; flag = false; &#125; &#125; if(flag)&#123; break; &#125; &#125; return arr;&#125;console.log(sort(arr)); 获取非行间样式的函数12]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[AMD和CMD的区别]]></title>
       <url>%2F2017%2F01%2F11%2FAMD%E5%92%8CAMD%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
       <content type="text"><![CDATA[AMD 是 RequireJS 在推广过程中对模块定义的规范化产出。 CMD 是 SeaJS 在推广过程中对模块定义的规范化产出。类似的还有 CommonJS Modules/2.0 规范，是 BravoJS 在推广过程中对模块定义的规范化产出。 这些规范的目的都是为了 JavaScript 的模块化开发，特别是在浏览器端的。目前这些规范的实现都能达成浏览器端模块化开发的目的。 区别： 对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible. CMD 推崇依赖就近，AMD 推崇依赖前置。看代码： 123456789// CMDdefine(function(require, exports, module) &#123;var a = require('./a')a.doSomething()// 此处略去 100 行var b = require('./b') // 依赖可以就近书写b.doSomething()// ... &#125;) 1234567// AMD 默认推荐的是define(['./a', './b'], function(a, b) &#123; // 依赖必须一开始就写好a.doSomething()// 此处略去 100 行b.doSomething()...&#125;) 虽然 AMD 也支持 CMD 的写法，同时还支持将 require 作为依赖项传递，但 RequireJS 的作者默认是最喜欢上面的写法，也是官方文档里默认的模块定义写法。 AMD 的 API 默认是一个当多个用，CMD 的 API 严格区分，推崇职责单一。比如 AMD 里，require 分全局 require 和局部 require，都叫 require。CMD 里，没有全局 require，而是根据模块系统的完备性，提供 seajs.use 来实现模块系统的加载启动。CMD 里，每个 API 都简单纯粹。 转自：玉伯链接：https://www.zhihu.com/question/20351507/answer/14859415来源：知乎]]></content>
@@ -11,7 +18,7 @@
     
     <entry>
       <title><![CDATA[nrm切换npm远利器]]></title>
-      <url>%2F2017%2F01%2F11%2Fnrm%E5%88%87%E6%8D%A2npm%E8%BF%9C%E5%88%A9%E5%99%A8%2F</url>
+      <url>%2F2017%2F01%2F11%2Fnrm%E5%88%87%E6%8D%A2npm%E6%BA%90%E5%88%A9%E5%99%A8%2F</url>
       <content type="text"><![CDATA[在使用npm时，官方的源下载npm包会比较慢，国内我们基本使用淘宝的源，最近公司内部搭建了一套npm私有仓库。要添加自己公司内部的npm源，公司内部的源不可能把npm官方的npm包都全量同步，故需要npm源之间的切换，如果使用npm registry xxx的话，太不好管理了。nrm是管理npm源切换的利器。使用方法如下： 安装nrm1npm install -g nrm 当然，install 都可以简写为g. 1npm i -g nrm 一些常用的命令 nrm –help&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;帮助信息 nrm ls&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;列出现在已经配置好的所有的原地址 nrm use&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;是切换到哪个源上 nrm add&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;添加源 nrm del &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;删除源 nrm test&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;测试源的响应时间，可以作为使用哪个源的参考 第一次下载nrm慢的问题 那么，如果你第一次下载nrm就特别慢，怎么解决呢？当然了，我们可以手动先配置个速度快的源，默认是npm官方的源，网速不好的话，确实非常慢，所以我们可以配置个淘宝的源（国内还是非常快的）。下面是手动配置的步骤： 1.打开C:\Users\Administrator文件夹，添加文件.npmrc写入registry=https://registry.npm.taobao.org/(直接创建是不能的，可以用编辑器创建文件) 2.然后就可以了，npm i -g nrm 3.nrm ls 查看npm 的数据源有哪些，标星号的表示正在使用的 4.nrm use 数据源的名字，例如 nrm use taobao 这样就同样安装好了，并且把源切换到了淘宝镜像了。]]></content>
     </entry>
 
