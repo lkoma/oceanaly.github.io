@@ -104,7 +104,7 @@ number、string、undefined、boolear、object、function
 
 split(  )和join的区别？
 split(  )是将字符串（根">
-<meta property="og:updated_time" content="2017-01-13T02:34:02.320Z">
+<meta property="og:updated_time" content="2017-01-13T03:25:42.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="问题汇总及一些小技巧">
 <meta name="twitter:description" content="行内元素有哪些?块级元素有哪些?
@@ -435,7 +435,7 @@ split(  )是将字符串（根">
 <h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><blockquote>
 <p>冒泡排序<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">5</span>,<span class="number">9</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">12</span>,<span class="number">13</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sort</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> count = <span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, len = arr.length; i&lt;len; i++)&#123;</div><div class="line">		<span class="keyword">var</span> flag = <span class="literal">true</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>,len = arr.length; j&lt;len-i; j++)&#123;</div><div class="line">			<span class="keyword">if</span>(arr[j]&gt;arr[j+<span class="number">1</span>])&#123;</div><div class="line">				count++;</div><div class="line">				<span class="keyword">var</span> temp = arr[j+<span class="number">1</span>];</div><div class="line">				arr[j+<span class="number">1</span>] = arr[j];</div><div class="line">				arr[j] = temp;</div><div class="line">				flag = <span class="literal">false</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(flag)&#123;</div><div class="line">			<span class="keyword">break</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> arr;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(sort(arr));</div></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="获取非行间样式的函数"><a href="#获取非行间样式的函数" class="headerlink" title="获取非行间样式的函数"></a>获取非行间样式的函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h2 id="获取非行间样式的函数"><a href="#获取非行间样式的函数" class="headerlink" title="获取非行间样式的函数"></a>获取非行间样式的函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj,name</span>)</span>&#123;</div><div class="line">	<span class="comment">//针对IE的兼容性</span></div><div class="line">	<span class="keyword">if</span>(obj.currentStyle)&#123;</div><div class="line">		<span class="keyword">return</span> obj.currentStyle[name];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		<span class="comment">//现代浏览器</span></div><div class="line">		<span class="keyword">return</span> getComputedStyle(obj,<span class="literal">false</span>)[name];</div><div class="line"> 	<span class="comment">//false是一个无用的参数</span></div><div class="line">	&#125;</div><div class="line"> &#125;</div><div class="line"> <span class="keyword">var</span> div = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>)[<span class="number">0</span>];</div><div class="line"> <span class="built_in">console</span>.log(getStyle(div,<span class="string">'width'</span>));</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -595,7 +595,7 @@ ds.charset = 'UTF-8';
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -604,7 +604,7 @@ ds.charset = 'UTF-8';
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -613,7 +613,7 @@ ds.charset = 'UTF-8';
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
